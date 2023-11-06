@@ -28,7 +28,6 @@ app.get("/",function(req,res){
                 }
             ]
         };
-
     const jsonData = JSON.stringify(data);
 
     const url = "https://us21.api.mailchimp.com/3.0/lists/52016fd2d0";
