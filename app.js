@@ -12,7 +12,6 @@ app.get("/",function(req,res){
 });
 
 
-
 app.post("/",function(req,res){
     const firstName = req.body.fName;
     const lastName = req.body.lname;
