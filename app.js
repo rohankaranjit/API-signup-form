@@ -85,6 +85,6 @@ app.get("/",function(req,res){
         res.redirect("/"); // Redirect to the root route ("/"), which corresponds to the signup page
     });
     
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("Server is running in 3000.");
     });
