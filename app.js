@@ -50,7 +50,19 @@ app.get("/",function(req,res){
       const mailchimpRequest = https.request(url,options,function(response){
 
         if(response.statusCode==200){
-            const successHTML = ;
+            const successHTML =`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>Success Page</title>
+            </head>
+            <body style="font-family: Arial, sans-serif; background-color: #f0f0f0; text-align: center; padding-top: 50px;">
+                <h1 style="color: green;">Success!</h1>
+                <p style="font-size: 18px;">You have succeeded.</p>
+            </body>
+            </html>
+        ` ;
     
         res.send(successHTML);
         }
