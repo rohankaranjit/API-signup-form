@@ -50,7 +50,7 @@ app.get("/",function(req,res){
       const mailchimpRequest = https.request(url,options,function(response){
 
         if(response.statusCode==200){
-            const successHTML =`
+            const successHTML = `
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -62,7 +62,7 @@ app.get("/",function(req,res){
                 <p style="font-size: 18px;">You have succeeded.</p>
             </body>
             </html>
-        ` ;
+        `;
     
         res.send(successHTML);
         }
