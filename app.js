@@ -34,8 +34,7 @@ app.get("/",function(req,res){
         };
 
         
-    
-
+    
 
 
     const jsonData = JSON.stringify(data);
