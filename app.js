@@ -75,8 +75,7 @@ app.get("/",function(req,res){
       mailchimpRequest.write(jsonData);
       mailchimpRequest.end();
 
-    });
-
+    });
     app.post("/failure", function(req, res) {
         res.redirect("/"); // Redirect to the root route ("/"), which corresponds to the signup page
     });
