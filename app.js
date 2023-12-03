@@ -7,7 +7,11 @@ const app = express();
 
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({extended : true}));
+
+
+
+app.use(bodyParser.urlencoded({extended : true}));
+
 
 app.get("/",function(req,res){
     res.sendFile(__dirname + "/signup.html");
@@ -34,7 +38,9 @@ app.get("/",function(req,res){
         };
 
         
-    
+    
+
+
     const jsonData = JSON.stringify(data);
 
     const url = "https://us21.api.mailchimp.com/3.0/lists/52016fd2d0";
@@ -67,7 +73,8 @@ app.get("/",function(req,res){
             res.sendFile(__dirname + "/failure.html");
         }
 
-        response.on("data",function(data){
+
+        response.on("data",function(data){
             console.log(JSON.parse(data));
         });
       });
@@ -75,7 +82,8 @@ app.get("/",function(req,res){
       mailchimpRequest.write(jsonData);
       mailchimpRequest.end();
 
-    });
+    });
+
     app.post("/failure", function(req, res) {
         res.redirect("/"); // Redirect to the root route ("/"), which corresponds to the signup page
     });
