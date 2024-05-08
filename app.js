@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https")
 
-
 cnst app = express();
 
 app.use(express.static("public"));
